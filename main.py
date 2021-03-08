@@ -1,12 +1,13 @@
-from pimux import function, Sensors
+import pimux
+from termux import API
+import requests
+#from commands import index
+#from info import index
 
-v = function.misc()
-s = Sensors.sensor()
+x = requests.get('https://w3schools.com/python/demopage.htm')
 
-v.vibrate()
+print(x.text)
 
-v.brightness(Brightness=100)
-v.brightness(Brightness=25)
+API.vibrate()
 
-sensors_resulted = s.listSensor()
-print(sensors_resulted)
+
